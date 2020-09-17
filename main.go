@@ -7,8 +7,13 @@ import (
 )
 
 func main() {
-	a := "1 + 1 + 3"
-	fmt.Println(Evaluate(a))
+	x := "1 + 1 + 3"
+
+	if Evaluate(x) != -1 {
+		fmt.Printf("%s = %d", x, Evaluate(x))
+	} else {
+		fmt.Println("x Not Valid")
+	}
 }
 
 func tokenizing(x string) []string {
